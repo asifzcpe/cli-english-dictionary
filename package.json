@@ -1,0 +1,25 @@
+{
+  "name": "cli-english-dictionary",
+  "version": "1.0.0",
+  "description": "a command line dictionary to get instant work meaning",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asifzcpe/cli-english-dictionary.git"
+  },
+  "author": "Md. asif rahman",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/asifzcpe/cli-english-dictionary/issues"
+  },
+  "homepage": "https://github.com/asifzcpe/cli-english-dictionary#readme",
+  "bin": {
+    "define": "./bin/index.js"
+  },
+  "dependencies": {
+    "unirest": "^0.6.0"
+  }
+}
