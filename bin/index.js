@@ -32,8 +32,15 @@ req.end(function (res) {
 	else{
 		var data=res.body.results[0].lexicalEntries[0];
 		var senses=data.entries[0].senses;
+
 		senses.forEach((definition,index)=>{
 			index+=1;
+			
+			if(typeof definition.definitions==='undefined'){
+				console.log("The word you are searching is not in database");
+				return;
+			}
+
 			console.log(index+". "+definition.definitions[0]+" ("+data.lexicalCategory.text+")");
 		});
 	}
