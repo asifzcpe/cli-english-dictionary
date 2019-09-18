@@ -11,11 +11,11 @@ go to command prompt and write as the following syntex:
 define YOUR_WORD
 ```
 
-##Example
+## Example
 ```javascript
 define process
 ```
-##Results
+## Results
 ```javascript
     1. a series of actions or steps taken in order to achieve a particular end (Noun)
     2. a summons or writ requiring a person to appear in court. (Noun)
