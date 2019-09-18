@@ -27,6 +27,7 @@ req.headers({
 req.end(function (res) {
 	if (res.error){
 		console.log("The word you are searching is not in database");
+		return;
 	}
 
 	var data=res.body.results[0].lexicalEntries[0];

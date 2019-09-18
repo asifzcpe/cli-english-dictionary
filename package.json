@@ -1,6 +1,6 @@
 {
   "name": "cli-english-dictionary",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a command line dictionary to get instant work meaning",
   "main": "index.js",
   "scripts": {
