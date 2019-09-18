@@ -5,6 +5,7 @@ var app_key  = "0f569eff54ea0496c08ea96f6b5c17fe"
 var endpoint = "entries"
 var language_code = "en-us"
 var word_id = process.argv[2];
+
 	
 if(typeof word_id==='undefined'){
 	console.log("Please, enter word to search like: define YOUR_WORD");
@@ -24,11 +25,14 @@ req.headers({
 
 
 req.end(function (res) {
-	if (res.error) throw new Error(res.error);
+	if (res.error){
+		console.log("The word you are searching is not in database");
+	}
 
-	var senses=res.body.results[0].lexicalEntries[0].entries[0].senses;
+	var data=res.body.results[0].lexicalEntries[0];
+	var senses=data.entries[0].senses;
 	senses.forEach((definition,index)=>{
 		index+=1;
-		console.log(index+". "+definition.definitions[0]);
+		console.log(index+". "+definition.definitions[0]+" ("+data.lexicalCategory.text+")");
 	});
 });
